@@ -21,11 +21,7 @@ reader.question("what is your password: ", function(input) {
     error = true;
   }
 
-  if (error) {
-    console.log(message);
-  } else {
-    console.log("success");
-  }
+  error ? console.log(message) : console.log("success");
 
   // This line closes the connection to the command line interface.
   reader.close();
