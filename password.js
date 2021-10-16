@@ -7,12 +7,26 @@ const reader = readline.createInterface({
 
 console.log("Welcome to the password validator");
 
-reader.question("what is your password ", function(input) {
-  if (input.length >= 10) {
-    console.log("success");
-  } else {
-    console.log("failure");
+reader.question("what is your password: ", function(input) {
+  let message = "";
+  let error = false;
+
+  if (input.search(/[0-9]/) == -1) {
+    message = "your password needs a number";
+    error = true;
   }
+
+  if (input.length < 10) {
+    message = "failure your password needs to be atleast 10 charecters long";
+    error = true;
+  }
+
+  if (error) {
+    console.log(message);
+  } else {
+    console.log("success");
+  }
+
   // This line closes the connection to the command line interface.
   reader.close();
 });

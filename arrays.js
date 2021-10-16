@@ -41,7 +41,7 @@ let middleNums = numbers.splice(1, 3);
 
 // CODE HERE
 
-function bigOrSmall(arr) {
+let bigOrSmall = arr => {
   let answers = [];
   for (var i = 0; i < arr.length; i++) {
     if (arr[i] > 100) {
@@ -52,9 +52,6 @@ function bigOrSmall(arr) {
   }
 
   return answers;
-}
+};
 
 bigOrSmall([100, 200, 10, 12]);
-
-// My comments
-// not sure what you mean by " Then, loop over the passed in arr parameter but I assumed you wanted us to pass in array of numbers in to test code"
