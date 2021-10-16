@@ -96,7 +96,7 @@ let add = {
 //CODE HERE
 let commit = {
   description:
-    "git add is the first command in a chain of operations that directs Git to save a snapshot of the current project state",
+    "git commit command captures a snapshot of the project's currently staged changes.",
   code: `git commit -m "message"`
 };
 
