@@ -10,7 +10,10 @@ console.log("Welcome to the password validator");
 reader.question("what is your password: ", function(input) {
   let status = {
     message: "",
-    error: false
+    error: false,
+    checkPassword: () => {
+      status.error ? console.log(status.message) : console.log("success");
+    }
   };
 
   if (input.search(/[0-9]/) == -1) {
@@ -24,7 +27,7 @@ reader.question("what is your password: ", function(input) {
     status.error = true;
   }
 
-  status.error ? console.log(status.message) : console.log("success");
+  status.checkPassword();
 
   // This line closes the connection to the command line interface.
   reader.close();
