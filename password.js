@@ -11,8 +11,8 @@ reader.question("what is your password: ", function(input) {
   let status = {
     message: "",
     error: false,
-    checkPassword: () => {
-      status.error ? console.log(status.message) : console.log("success");
+    checkPassword() {
+      this.error ? console.log(this.message) : console.log("success");
     }
   };
 
